@@ -50,6 +50,16 @@ public struct Coord
         return System.Math.Abs(a.x - b.x) <= 1 && System.Math.Abs(a.y - b.y) <= 1;
     }
 
+    public static Coord operator + (Coord a, Coord b)
+    {
+        return new Coord(a.x + b.x, a.y + b.y);
+    }
+
+    public static Coord operator - (Coord a, Coord b)
+    {
+        return new Coord(a.x - b.x, a.y - b.y);
+    }
+
     public static bool operator == (Coord a, Coord b)
     {
         return a.x == b.x && a.y == b.y;
